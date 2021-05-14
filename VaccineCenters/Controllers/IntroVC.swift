@@ -15,6 +15,11 @@ class IntroVC: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var skipBtn: UIButton!
     
+    
+    let color: [UIColor] = [#colorLiteral(red: 0.6774190068, green: 0.8229250312, blue: 0.7641521096, alpha: 1),#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1),#colorLiteral(red: 0.5849013329, green: 0.5724678636, blue: 0.6870082617, alpha: 1),#colorLiteral(red: 0.5146358609, green: 0.6227608323, blue: 0.7774812579, alpha: 1),#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1),#colorLiteral(red: 0.9542465806, green: 0.4870094061, blue: 0.3273182511, alpha: 1)]
+    let imgNames = ["face","mask","washHands","distancing","eatHealthy","stayHome"]
+    let lblNames = ["Don't Touch Your Face. 🙅🏻‍♀️","I Wear a Mask to Protect You, You Wear a Mask to Protect Me. 😷","Bury the Germs, Wash Your Hands. 🧤","Maintain the Gap. 🧍🏼‍♂️←→🧍🏻‍♀️","A Healthy Outside Starts From the Inside. 🥗","Stay Home, Stay Healthy, Stay Safe."]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,14 +48,11 @@ extension IntroVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IntroCVC", for: indexPath) as! IntroCVC
         
-        //let color: [UIColor] = [.red,.orange,.yellow,.green,.blue]
-        // cell.introAnimeView.backgroundColor = color[indexPath.row]
+        cell.introView.backgroundColor = color[indexPath.row]
         
-        let imgNames = ["face","mask","washHands","distancing","eatHealthy","stayHome"]
         cell.imgView.image = UIImage(named: "\(imgNames[indexPath.row])")
-        
-        let lblNames = ["Don't Touch Your Face. 🙅🏻‍♀️","I Wear a Mask to Protect You, You Wear a Mask to Protect Me. 😷","Bury the Germs, Wash Your Hands. 🧤","Maintain the Gap. 🧍🏼‍♂️←→🧍🏻‍♀️","A Healthy Outside Starts From the Inside. 🥗","Stay Home, Stay Healthy, Stay Safe."]
         cell.introLbl.text = "\(lblNames[indexPath.row])"
+        
         return cell
     }
     

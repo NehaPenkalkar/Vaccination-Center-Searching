@@ -16,12 +16,14 @@ class DistrictNameVC: UIViewController {
     
     var district = [NSDictionary]()
     
+    var navTitle = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "District"
+        self.navigationItem.title = "\(navTitle)"
         districtAPI()
     }
     

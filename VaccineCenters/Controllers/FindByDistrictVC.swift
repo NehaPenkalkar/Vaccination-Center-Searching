@@ -28,6 +28,15 @@ class FindByDistrictVC: UIViewController, UITextFieldDelegate{
         pickDate()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("Yayyyyyy")
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     
     func pickDate(){
         datePicker = UIDatePicker()

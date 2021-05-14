@@ -61,6 +61,9 @@ extension StateNameVC: UITableViewDelegate, UITableViewDataSource{
         let vc = storyboard?.instantiateViewController(withIdentifier: "DistrictNameVC") as! DistrictNameVC
         let id = state[indexPath.row].value(forKey: "state_id") as? Int ?? 0
         vc.stateId = id
+        
+        let title = state[indexPath.row].value(forKey: "state_name") as? String ?? ""
+        vc.navTitle = "\(title)"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
