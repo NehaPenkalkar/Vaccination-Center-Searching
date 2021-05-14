@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2230E4B5264EA8F800DDD079 /* VaccinationByDistrictTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E4B4264EA8F800DDD079 /* VaccinationByDistrictTVC.swift */; };
+		2230E4B7264EAE9C00DDD079 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E4B6264EAE9C00DDD079 /* DetailsVC.swift */; };
 		224CCCD9264D7AC400B48238 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CCCD8264D7AC400B48238 /* IntroVC.swift */; };
 		224FB4EE264DA7C000AEB1F1 /* IntroCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */; };
 		224FB4F0264DAA3C00AEB1F1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2230E4B4264EA8F800DDD079 /* VaccinationByDistrictTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationByDistrictTVC.swift; sourceTree = "<group>"; };
+		2230E4B6264EAE9C00DDD079 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		224CCCD8264D7AC400B48238 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCVC.swift; sourceTree = "<group>"; };
 		224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2230E4B8264EAEAE00DDD079 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */,
+				2230E4B4264EA8F800DDD079 /* VaccinationByDistrictTVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2230E4B9264EAEC900DDD079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		22D91A51264C301500867868 = {
 			isa = PBXGroup;
 			children = (
@@ -82,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				22D91A75264C3CE700867868 /* Controllers */,
-				224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */,
-				224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */,
+				2230E4B8264EAEAE00DDD079 /* Views */,
+				2230E4B9264EAEC900DDD079 /* Model */,
 				22D91A5D264C301500867868 /* AppDelegate.swift */,
 				22D91A5F264C301500867868 /* SceneDelegate.swift */,
 				22D91A63264C301500867868 /* Main.storyboard */,
@@ -105,6 +126,7 @@
 				22D91A73264C3C5B00867868 /* StateNameVC.swift */,
 				22D91A76264C3FBD00867868 /* DistrictNameVC.swift */,
 				22D91A78264C542F00867868 /* VaccinationByDistrict.swift */,
+				2230E4B6264EAE9C00DDD079 /* DetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +264,7 @@
 			files = (
 				22D91A72264C3B5700867868 /* FindByDistrictVC.swift in Sources */,
 				224FB4EE264DA7C000AEB1F1 /* IntroCVC.swift in Sources */,
+				2230E4B5264EA8F800DDD079 /* VaccinationByDistrictTVC.swift in Sources */,
 				22D91A77264C3FBD00867868 /* DistrictNameVC.swift in Sources */,
 				22D91A7B264C5DFC00867868 /* VaccinationByPin.swift in Sources */,
 				22D91A7D264C681100867868 /* ViewController.swift in Sources */,
@@ -250,6 +273,7 @@
 				22D91A74264C3C5B00867868 /* StateNameVC.swift in Sources */,
 				22D91A5E264C301500867868 /* AppDelegate.swift in Sources */,
 				224FB4F0264DAA3C00AEB1F1 /* CustomView.swift in Sources */,
+				2230E4B7264EAE9C00DDD079 /* DetailsVC.swift in Sources */,
 				22D91A79264C542F00867868 /* VaccinationByDistrict.swift in Sources */,
 				22D91A60264C301500867868 /* SceneDelegate.swift in Sources */,
 			);

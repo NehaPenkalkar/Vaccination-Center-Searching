@@ -62,17 +62,69 @@ extension VaccinationByDistrict: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VaccinationByDistrictTVC") as! VaccinationByDistrictTVC
         
         let name = dVaccine[indexPath.row].value(forKey: "name") as? String ?? ""
-        cell.textLabel?.text = "\(name)"
+        cell.nameLbl.text = "Center: \(name)"
         
         let id = dVaccine[indexPath.row].value(forKey: "center_id") as? Int ?? 0
-        cell.detailTextLabel?.text = "\(id)"
+        cell.idLbl.text = "Id: \(id)"
+        
+        cell.viewDetails.tag = indexPath.row
+        cell.viewDetails.addTarget(self, action: #selector(viewDetailsPressed(sender:)), for: .touchUpInside)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
+    }
+    
+    @objc func viewDetailsPressed(sender: UIButton){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        
+        let address = dVaccine[indexPath.row].value(forKey: "address") as? String ?? "Address Unavailable"
+        if address == ""{
+            vc.address = "Address Unavailable"
+        }else{
+            vc.address = "Address: \(address)"
+        }
+        
+        let fromTime = dVaccine[indexPath.row].value(forKey: "from") as? String ?? "Time Unavailable"
+        let toTime = dVaccine[indexPath.row].value(forKey: "to") as? String ?? "Time Unavailable"
+        if fromTime == "" || toTime == ""{
+            vc.from = "Time Unavailable"
+        }else{
+            vc.from = "Time: \(fromTime) to \(toTime)"
+        }
+       
+        
+        let fees = dVaccine[indexPath.row].value(forKey: "fee_type") as? String ?? "Fees Unavailable"
+        if fees == "Paid"{
+            vc.fees = "Paid"
+        }else{
+            vc.fees = "Free"
+        }
+        
+        let vaccine = dVaccine[indexPath.row].value(forKey: "vaccine") as? String ?? "Vaccine Name Unavailable"
+        if vaccine == ""{
+            vc.vaccineName = "Vaccine Name Unavailable"
+        }else{
+            vc.vaccineName = "Vaccine: \(vaccine)"
+        }
+        
+        let availableSlots = dVaccine[indexPath.row].value(forKey: "slots") as! [String]
+        let time = availableSlots.joined(separator: ",")
+        if availableSlots.isEmpty{
+            vc.slots = "Slots Unavailable"
+        }else{
+            vc.slots = "Slots: \(time)"
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
