@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		224CCCD9264D7AC400B48238 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CCCD8264D7AC400B48238 /* IntroVC.swift */; };
+		224FB4EE264DA7C000AEB1F1 /* IntroCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */; };
+		224FB4F0264DAA3C00AEB1F1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */; };
+		22D91A5E264C301500867868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A5D264C301500867868 /* AppDelegate.swift */; };
+		22D91A60264C301500867868 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A5F264C301500867868 /* SceneDelegate.swift */; };
+		22D91A62264C301500867868 /* FindByPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A61264C301500867868 /* FindByPinVC.swift */; };
+		22D91A65264C301500867868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D91A63264C301500867868 /* Main.storyboard */; };
+		22D91A67264C301A00867868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D91A66264C301A00867868 /* Assets.xcassets */; };
+		22D91A6A264C301A00867868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D91A68264C301A00867868 /* LaunchScreen.storyboard */; };
+		22D91A72264C3B5700867868 /* FindByDistrictVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A71264C3B5700867868 /* FindByDistrictVC.swift */; };
+		22D91A74264C3C5B00867868 /* StateNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A73264C3C5B00867868 /* StateNameVC.swift */; };
+		22D91A77264C3FBD00867868 /* DistrictNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A76264C3FBD00867868 /* DistrictNameVC.swift */; };
+		22D91A79264C542F00867868 /* VaccinationByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A78264C542F00867868 /* VaccinationByDistrict.swift */; };
+		22D91A7B264C5DFC00867868 /* VaccinationByPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A7A264C5DFC00867868 /* VaccinationByPin.swift */; };
+		22D91A7D264C681100867868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A7C264C681100867868 /* ViewController.swift */; };
+		61007AE3F559F48361081BAB /* Pods_VaccineCenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CC2A61D1A3D7E0E2E4E323 /* Pods_VaccineCenters.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		224CCCD8264D7AC400B48238 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
+		224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCVC.swift; sourceTree = "<group>"; };
+		224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		22D91A5A264C301500867868 /* VaccineCenters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCenters.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D91A5D264C301500867868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22D91A5F264C301500867868 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		22D91A61264C301500867868 /* FindByPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByPinVC.swift; sourceTree = "<group>"; };
+		22D91A64264C301500867868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22D91A66264C301A00867868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22D91A69264C301A00867868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22D91A6B264C301A00867868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D91A71264C3B5700867868 /* FindByDistrictVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByDistrictVC.swift; sourceTree = "<group>"; };
+		22D91A73264C3C5B00867868 /* StateNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateNameVC.swift; sourceTree = "<group>"; };
+		22D91A76264C3FBD00867868 /* DistrictNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictNameVC.swift; sourceTree = "<group>"; };
+		22D91A78264C542F00867868 /* VaccinationByDistrict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationByDistrict.swift; sourceTree = "<group>"; };
+		22D91A7A264C5DFC00867868 /* VaccinationByPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationByPin.swift; sourceTree = "<group>"; };
+		22D91A7C264C681100867868 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E02FED65774D6B1587D1B94 /* Pods-VaccineCenters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCenters.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCenters/Pods-VaccineCenters.debug.xcconfig"; sourceTree = "<group>"; };
+		85324737CFC4F07C648D9BC5 /* Pods-VaccineCenters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCenters.release.xcconfig"; path = "Target Support Files/Pods-VaccineCenters/Pods-VaccineCenters.release.xcconfig"; sourceTree = "<group>"; };
+		90CC2A61D1A3D7E0E2E4E323 /* Pods_VaccineCenters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCenters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22D91A57264C301500867868 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61007AE3F559F48361081BAB /* Pods_VaccineCenters.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22D91A51264C301500867868 = {
+			isa = PBXGroup;
+			children = (
+				22D91A5C264C301500867868 /* VaccineCenters */,
+				22D91A5B264C301500867868 /* Products */,
+				75BF628B80387E63605540EB /* Pods */,
+				A60AA8953683C352C3BA881C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22D91A5B264C301500867868 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22D91A5A264C301500867868 /* VaccineCenters.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22D91A5C264C301500867868 /* VaccineCenters */ = {
+			isa = PBXGroup;
+			children = (
+				22D91A75264C3CE700867868 /* Controllers */,
+				224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */,
+				224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */,
+				22D91A5D264C301500867868 /* AppDelegate.swift */,
+				22D91A5F264C301500867868 /* SceneDelegate.swift */,
+				22D91A63264C301500867868 /* Main.storyboard */,
+				22D91A66264C301A00867868 /* Assets.xcassets */,
+				22D91A68264C301A00867868 /* LaunchScreen.storyboard */,
+				22D91A6B264C301A00867868 /* Info.plist */,
+			);
+			path = VaccineCenters;
+			sourceTree = "<group>";
+		};
+		22D91A75264C3CE700867868 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				224CCCD8264D7AC400B48238 /* IntroVC.swift */,
+				22D91A7C264C681100867868 /* ViewController.swift */,
+				22D91A61264C301500867868 /* FindByPinVC.swift */,
+				22D91A7A264C5DFC00867868 /* VaccinationByPin.swift */,
+				22D91A71264C3B5700867868 /* FindByDistrictVC.swift */,
+				22D91A73264C3C5B00867868 /* StateNameVC.swift */,
+				22D91A76264C3FBD00867868 /* DistrictNameVC.swift */,
+				22D91A78264C542F00867868 /* VaccinationByDistrict.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		75BF628B80387E63605540EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E02FED65774D6B1587D1B94 /* Pods-VaccineCenters.debug.xcconfig */,
+				85324737CFC4F07C648D9BC5 /* Pods-VaccineCenters.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A60AA8953683C352C3BA881C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90CC2A61D1A3D7E0E2E4E323 /* Pods_VaccineCenters.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22D91A59264C301500867868 /* VaccineCenters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D91A6E264C301A00867868 /* Build configuration list for PBXNativeTarget "VaccineCenters" */;
+			buildPhases = (
+				4BEC27DA4742384FCFFE4CEF /* [CP] Check Pods Manifest.lock */,
+				22D91A56264C301500867868 /* Sources */,
+				22D91A57264C301500867868 /* Frameworks */,
+				22D91A58264C301500867868 /* Resources */,
+				7FE8D3212455E11A65CF6A6E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaccineCenters;
+			productName = VaccineCenters;
+			productReference = 22D91A5A264C301500867868 /* VaccineCenters.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22D91A52264C301500867868 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					22D91A59264C301500867868 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 22D91A55264C301500867868 /* Build configuration list for PBXProject "VaccineCenters" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22D91A51264C301500867868;
+			productRefGroup = 22D91A5B264C301500867868 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22D91A59264C301500867868 /* VaccineCenters */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22D91A58264C301500867868 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D91A6A264C301A00867868 /* LaunchScreen.storyboard in Resources */,
+				22D91A67264C301A00867868 /* Assets.xcassets in Resources */,
+				22D91A65264C301500867868 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BEC27DA4742384FCFFE4CEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VaccineCenters-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE8D3212455E11A65CF6A6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccineCenters/Pods-VaccineCenters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccineCenters/Pods-VaccineCenters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VaccineCenters/Pods-VaccineCenters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22D91A56264C301500867868 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D91A72264C3B5700867868 /* FindByDistrictVC.swift in Sources */,
+				224FB4EE264DA7C000AEB1F1 /* IntroCVC.swift in Sources */,
+				22D91A77264C3FBD00867868 /* DistrictNameVC.swift in Sources */,
+				22D91A7B264C5DFC00867868 /* VaccinationByPin.swift in Sources */,
+				22D91A7D264C681100867868 /* ViewController.swift in Sources */,
+				22D91A62264C301500867868 /* FindByPinVC.swift in Sources */,
+				224CCCD9264D7AC400B48238 /* IntroVC.swift in Sources */,
+				22D91A74264C3C5B00867868 /* StateNameVC.swift in Sources */,
+				22D91A5E264C301500867868 /* AppDelegate.swift in Sources */,
+				224FB4F0264DAA3C00AEB1F1 /* CustomView.swift in Sources */,
+				22D91A79264C542F00867868 /* VaccinationByDistrict.swift in Sources */,
+				22D91A60264C301500867868 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22D91A63264C301500867868 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D91A64264C301500867868 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22D91A68264C301A00867868 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D91A69264C301A00867868 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22D91A6C264C301A00867868 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22D91A6D264C301A00867868 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22D91A6F264C301A00867868 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E02FED65774D6B1587D1B94 /* Pods-VaccineCenters.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FL949C72N2;
+				INFOPLIST_FILE = VaccineCenters/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Neha.VaccineCenters;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22D91A70264C301A00867868 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85324737CFC4F07C648D9BC5 /* Pods-VaccineCenters.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FL949C72N2;
+				INFOPLIST_FILE = VaccineCenters/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Neha.VaccineCenters;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22D91A55264C301500867868 /* Build configuration list for PBXProject "VaccineCenters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D91A6C264C301A00867868 /* Debug */,
+				22D91A6D264C301A00867868 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D91A6E264C301A00867868 /* Build configuration list for PBXNativeTarget "VaccineCenters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D91A6F264C301A00867868 /* Debug */,
+				22D91A70264C301A00867868 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22D91A52264C301500867868 /* Project object */;
+}
