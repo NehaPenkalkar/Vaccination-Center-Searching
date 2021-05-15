@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220F2EA7264F0F8900714D2D /* activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 220F2EA6264F0F8900714D2D /* activity.json */; };
 		2230E4B5264EA8F800DDD079 /* VaccinationByDistrictTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E4B4264EA8F800DDD079 /* VaccinationByDistrictTVC.swift */; };
 		2230E4B7264EAE9C00DDD079 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E4B6264EAE9C00DDD079 /* DetailsVC.swift */; };
 		224CCCD9264D7AC400B48238 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CCCD8264D7AC400B48238 /* IntroVC.swift */; };
 		224FB4EE264DA7C000AEB1F1 /* IntroCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */; };
 		224FB4F0264DAA3C00AEB1F1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */; };
+		229A845D264F14E200D78330 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A845C264F14E200D78330 /* Connectivity.swift */; };
 		22D91A5E264C301500867868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A5D264C301500867868 /* AppDelegate.swift */; };
 		22D91A60264C301500867868 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A5F264C301500867868 /* SceneDelegate.swift */; };
 		22D91A62264C301500867868 /* FindByPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D91A61264C301500867868 /* FindByPinVC.swift */; };
@@ -28,11 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220F2EA6264F0F8900714D2D /* activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activity.json; sourceTree = "<group>"; };
 		2230E4B4264EA8F800DDD079 /* VaccinationByDistrictTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationByDistrictTVC.swift; sourceTree = "<group>"; };
 		2230E4B6264EAE9C00DDD079 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		224CCCD8264D7AC400B48238 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		224FB4ED264DA7C000AEB1F1 /* IntroCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCVC.swift; sourceTree = "<group>"; };
 		224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		229A845C264F14E200D78330 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		22D91A5A264C301500867868 /* VaccineCenters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCenters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D91A5D264C301500867868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D91A5F264C301500867868 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				224FB4EF264DAA3C00AEB1F1 /* CustomView.swift */,
+				229A845C264F14E200D78330 /* Connectivity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				22D91A5F264C301500867868 /* SceneDelegate.swift */,
 				22D91A63264C301500867868 /* Main.storyboard */,
 				22D91A66264C301A00867868 /* Assets.xcassets */,
+				220F2EA6264F0F8900714D2D /* activity.json */,
 				22D91A68264C301A00867868 /* LaunchScreen.storyboard */,
 				22D91A6B264C301A00867868 /* Info.plist */,
 			);
@@ -209,6 +215,7 @@
 			files = (
 				22D91A6A264C301A00867868 /* LaunchScreen.storyboard in Resources */,
 				22D91A67264C301A00867868 /* Assets.xcassets in Resources */,
+				220F2EA7264F0F8900714D2D /* activity.json in Resources */,
 				22D91A65264C301500867868 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +271,7 @@
 			files = (
 				22D91A72264C3B5700867868 /* FindByDistrictVC.swift in Sources */,
 				224FB4EE264DA7C000AEB1F1 /* IntroCVC.swift in Sources */,
+				229A845D264F14E200D78330 /* Connectivity.swift in Sources */,
 				2230E4B5264EA8F800DDD079 /* VaccinationByDistrictTVC.swift in Sources */,
 				22D91A77264C3FBD00867868 /* DistrictNameVC.swift in Sources */,
 				22D91A7B264C5DFC00867868 /* VaccinationByPin.swift in Sources */,

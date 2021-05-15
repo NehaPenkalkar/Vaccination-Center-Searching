@@ -7,8 +7,11 @@
 
 import UIKit
 import Alamofire
+import Lottie
 
 class VaccinationByDistrict: UIViewController {
+    
+    @IBOutlet weak var actInd: AnimationView!
     
     @IBOutlet weak var vaccinationDistrictTV: UITableView!
     
@@ -22,36 +25,62 @@ class VaccinationByDistrict: UIViewController {
         
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Vaccination Centers"
-        
         vaccinationDistrictAPI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        actInd.play()
+        actInd.loopMode = .loop
     }
     
     func vaccinationDistrictAPI(){
         
-        AF.request("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=\(id)&date=\(date)").responseJSON{(resp) in
-            if let  data = resp.value as? NSDictionary {
-                
-                self.dVaccine = data.value(forKey: "sessions") as! [NSDictionary]
-                self.vaccinationDistrictTV.reloadData()
-                
-                if self.dVaccine.isEmpty{
+        if Connectivity.isConnectedToInternet(){
+            
+            AF.request("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=\(id)&date=\(date)").responseJSON{(resp) in
+                if let  data = resp.value as? NSDictionary {
                     
-                    self.vaccinationDistrictTV.isHidden = true
-                    let alert = UIAlertController(title: "No Data Found", message: "The district you are looking into has no vaccination slots available.", preferredStyle: .alert)
+                    self.actInd.pause()
+                    self.actInd.isHidden = true
                     
-                    let ok = UIAlertAction(title: "OK", style: .cancel) { alert in
-                        self.navigationController?.popViewController(animated: true)
+                    self.dVaccine = data.value(forKey: "sessions") as! [NSDictionary]
+                    self.vaccinationDistrictTV.reloadData()
+                    
+                    if self.dVaccine.isEmpty{
+                        
+                        self.vaccinationDistrictTV.isHidden = true
+                        let alert = UIAlertController(title: "No Data Found", message: "The district you are looking into has no vaccination slots available.", preferredStyle: .alert)
+                        
+                        let ok = UIAlertAction(title: "OK", style: .cancel) { alert in
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
                     }
+                }
+                else {
                     
-                    alert.addAction(ok)
-                    self.present(alert, animated: true, completion: nil)
+                    print("Error")
                 }
             }
-            else {
-                
-                print("Error")
-            }
+        }else{
+            
+            self.actInd.pause()
+            self.actInd.isHidden = true
+            showErr(title: "No Internet Connection!!", message: "Please Check Your Internet Connection and Try Again")
         }
+        
+    }
+    
+    func showErr(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel) { alert in
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -101,7 +130,6 @@ extension VaccinationByDistrict: UITableViewDelegate, UITableViewDataSource{
         }else{
             vc.from = "Time: \(fromTime) to \(toTime)"
         }
-       
         
         let fees = dVaccine[indexPath.row].value(forKey: "fee_type") as? String ?? "Fees Unavailable"
         if fees == "Paid"{

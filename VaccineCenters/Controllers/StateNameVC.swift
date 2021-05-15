@@ -7,8 +7,11 @@
 
 import UIKit
 import Alamofire
+import Lottie
 
 class StateNameVC: UIViewController {
+    
+    @IBOutlet weak var actInd: AnimationView!
     
     var state = [NSDictionary]()
     
@@ -21,20 +24,47 @@ class StateNameVC: UIViewController {
         stateAPI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        actInd.play()
+        actInd.loopMode = .loop
+    }
+    
     
     func stateAPI(){
         
-        AF.request("https://cdn-api.co-vin.in/api/v2/admin/location/states").responseJSON{(resp) in
-            if let  data = resp.value as? NSDictionary {
-                
-                self.state = data.value(forKey: "states") as! [NSDictionary]
-                self.stateDisplayTV.reloadData()
+        if Connectivity.isConnectedToInternet(){
+            AF.request("https://cdn-api.co-vin.in/api/v2/admin/location/states").responseJSON{(resp) in
+                if let  data = resp.value as? NSDictionary {
+                    
+                    self.actInd.pause()
+                    self.actInd.isHidden = true
+                    
+                    self.state = data.value(forKey: "states") as! [NSDictionary]
+                    self.stateDisplayTV.reloadData()
+                }
+                else {
+                    
+                    print("Error")
+                }
             }
-            else {
-                
-                print("Error")
-            }
+        }else{
+            
+            self.actInd.pause()
+            self.actInd.isHidden = true
+            showErr(title: "No Internet Connection!!", message: "Please Check Your Internet Connection and Try Again")
         }
+        
+    }
+    
+    func showErr(title: String, message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel) { alert in
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 }
 

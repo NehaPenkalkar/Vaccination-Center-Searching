@@ -13,6 +13,7 @@ class FindByDistrictVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var dateTF: UITextField!
     
     var text = ""
+    var name = ""
     
     private var datePicker: UIDatePicker?
     
@@ -20,6 +21,8 @@ class FindByDistrictVC: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "\(name)"
+        
         if (distIdTF != nil)
         {
             distIdTF.text = "\(text)"
@@ -27,16 +30,6 @@ class FindByDistrictVC: UIViewController, UITextFieldDelegate{
         
         pickDate()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("Yayyyyyy")
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     
     func pickDate(){
         datePicker = UIDatePicker()

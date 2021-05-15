@@ -7,8 +7,11 @@
 
 import UIKit
 import Alamofire
+import Lottie
 
 class DistrictNameVC: UIViewController {
+    
+    @IBOutlet weak var actInd: AnimationView!
     
     @IBOutlet weak var districtDisplayTV: UITableView!
     
@@ -27,19 +30,46 @@ class DistrictNameVC: UIViewController {
         districtAPI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        actInd.play()
+        actInd.loopMode = .loop
+    }
+    
     func districtAPI(){
         
-        AF.request("https://cdn-api.co-vin.in/api/v2/admin/location/districts/\(stateId)").responseJSON{(resp) in
-            if let  data = resp.value as? NSDictionary {
-                
-                self.district = data.value(forKey: "districts") as! [NSDictionary]
-                self.districtDisplayTV.reloadData()
+        if Connectivity.isConnectedToInternet(){
+            
+            AF.request("https://cdn-api.co-vin.in/api/v2/admin/location/districts/\(stateId)").responseJSON{(resp) in
+                if let  data = resp.value as? NSDictionary {
+                    
+                    self.actInd.pause()
+                    self.actInd.isHidden = true
+                    
+                    self.district = data.value(forKey: "districts") as! [NSDictionary]
+                    self.districtDisplayTV.reloadData()
+                }
+                else {
+                    
+                    print("Error")
+                }
             }
-            else {
-                
-                print("Error")
-            }
+        }else{
+            
+            self.actInd.pause()
+            self.actInd.isHidden = true
+            showErr(title: "No Internet Connection!!", message: "Please Check Your Internet Connection and Try Again")
         }
+        
+    }
+    
+    func showErr(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel) { alert in
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -67,6 +97,9 @@ extension DistrictNameVC: UITableViewDataSource, UITableViewDelegate{
         let vc = storyboard?.instantiateViewController(withIdentifier: "FindByDistrictVC") as! FindByDistrictVC
         let id = district[indexPath.row].value(forKey: "district_id") as? Int ?? 0
         vc.text = "\(id)"
+        
+        let name = district[indexPath.row].value(forKey: "district_name") as? String ?? ""
+        vc.name = "\(name)"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

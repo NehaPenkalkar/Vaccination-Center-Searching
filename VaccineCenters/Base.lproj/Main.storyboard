@@ -183,11 +183,24 @@
                                     <outlet property="delegate" destination="Eyf-XT-TUq" id="vox-Mq-J3C"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-s9-IBn" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="e9G-Sw-NsH"/>
+                                    <constraint firstAttribute="width" secondItem="6rN-s9-IBn" secondAttribute="height" multiplier="1:1" id="jNz-h1-HkE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="activity"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fuF-JV-SIx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6rN-s9-IBn" firstAttribute="centerX" secondItem="36A-cT-ewl" secondAttribute="centerX" id="GTW-rV-HmV"/>
                             <constraint firstAttribute="bottom" secondItem="k1n-SA-Cdh" secondAttribute="bottom" id="HeW-M1-VjZ"/>
+                            <constraint firstItem="6rN-s9-IBn" firstAttribute="centerY" secondItem="36A-cT-ewl" secondAttribute="centerY" id="SEO-i1-Vr2"/>
                             <constraint firstItem="k1n-SA-Cdh" firstAttribute="top" secondItem="fuF-JV-SIx" secondAttribute="top" id="T7F-nY-b3T"/>
                             <constraint firstItem="k1n-SA-Cdh" firstAttribute="leading" secondItem="fuF-JV-SIx" secondAttribute="leading" id="gzr-VS-dFV"/>
                             <constraint firstItem="k1n-SA-Cdh" firstAttribute="trailing" secondItem="fuF-JV-SIx" secondAttribute="trailing" id="mCs-Ko-4CQ"/>
@@ -195,12 +208,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="States" id="3nt-4M-BCT"/>
                     <connections>
+                        <outlet property="actInd" destination="6rN-s9-IBn" id="HgU-VY-Aaq"/>
                         <outlet property="stateDisplayTV" destination="k1n-SA-Cdh" id="7ip-7d-OY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j91-cI-vsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3270" y="512"/>
+            <point key="canvasLocation" x="3269.5652173913045" y="511.60714285714283"/>
         </scene>
         <!--District NameVC-->
         <scene sceneID="Nbx-bn-7un">
@@ -218,18 +232,33 @@
                                     <outlet property="delegate" destination="SRb-Ty-03q" id="9C7-gA-6MN"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmC-ey-caA" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Bhk-bH-eth"/>
+                                    <constraint firstAttribute="width" secondItem="lmC-ey-caA" secondAttribute="height" multiplier="1:1" id="yD4-5m-WRy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="activity"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7el-bg-PLb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lmC-ey-caA" firstAttribute="width" secondItem="lmC-ey-caA" secondAttribute="height" multiplier="1:1" id="9Wd-Di-1h4"/>
+                            <constraint firstItem="lmC-ey-caA" firstAttribute="centerY" secondItem="mgX-pe-qQu" secondAttribute="centerY" id="H9k-z0-N3P"/>
                             <constraint firstItem="9UC-64-GZN" firstAttribute="top" secondItem="7el-bg-PLb" secondAttribute="top" id="V7n-Hp-wUG"/>
                             <constraint firstItem="9UC-64-GZN" firstAttribute="trailing" secondItem="7el-bg-PLb" secondAttribute="trailing" id="bje-yp-wj3"/>
                             <constraint firstItem="9UC-64-GZN" firstAttribute="leading" secondItem="7el-bg-PLb" secondAttribute="leading" id="cmB-IJ-vmt"/>
                             <constraint firstAttribute="bottom" secondItem="9UC-64-GZN" secondAttribute="bottom" id="odf-Rq-ymk"/>
+                            <constraint firstItem="lmC-ey-caA" firstAttribute="centerX" secondItem="mgX-pe-qQu" secondAttribute="centerX" id="s9E-Er-C0A"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="actInd" destination="lmC-ey-caA" id="iIR-yG-jIQ"/>
                         <outlet property="districtDisplayTV" destination="9UC-64-GZN" id="zXy-Ch-tSe"/>
                     </connections>
                 </viewController>
@@ -306,11 +335,25 @@
                                     <outlet property="delegate" destination="K5p-2U-MkK" id="0CS-m0-JGE"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zw-RG-evZ" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="UnP-oI-5eq"/>
+                                    <constraint firstAttribute="width" secondItem="1Zw-RG-evZ" secondAttribute="height" multiplier="1:1" id="yoV-A7-RxW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="activity"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S1R-Uj-6MR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1Zw-RG-evZ" firstAttribute="width" secondItem="1Zw-RG-evZ" secondAttribute="height" multiplier="1:1" id="54q-Li-GGZ"/>
                             <constraint firstAttribute="bottom" secondItem="rfb-TZ-fDf" secondAttribute="bottom" id="A85-Te-YmQ"/>
+                            <constraint firstItem="1Zw-RG-evZ" firstAttribute="centerY" secondItem="rjs-zP-u34" secondAttribute="centerY" id="BKR-91-7Z2"/>
+                            <constraint firstItem="1Zw-RG-evZ" firstAttribute="centerX" secondItem="rjs-zP-u34" secondAttribute="centerX" id="MZ3-xU-hU1"/>
                             <constraint firstItem="rfb-TZ-fDf" firstAttribute="top" secondItem="S1R-Uj-6MR" secondAttribute="top" id="PBr-55-FfU"/>
                             <constraint firstItem="rfb-TZ-fDf" firstAttribute="trailing" secondItem="S1R-Uj-6MR" secondAttribute="trailing" id="uno-tE-dnm"/>
                             <constraint firstItem="rfb-TZ-fDf" firstAttribute="leading" secondItem="S1R-Uj-6MR" secondAttribute="leading" id="veD-fb-olP"/>
@@ -318,6 +361,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="actInd" destination="1Zw-RG-evZ" id="4DB-4u-OLN"/>
                         <outlet property="vaccinationDistrictTV" destination="rfb-TZ-fDf" id="3Kb-mp-TM8"/>
                     </connections>
                 </viewController>
@@ -483,18 +527,33 @@
                                     <outlet property="delegate" destination="ICp-EV-jkS" id="3Q9-46-S2L"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvn-Of-yUc" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xvn-Of-yUc" secondAttribute="height" multiplier="1:1" id="AOw-yg-V00"/>
+                                    <constraint firstAttribute="width" constant="120" id="pw7-jS-u37"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="activity"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="04v-sc-PGl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Xvn-Of-yUc" firstAttribute="centerX" secondItem="A0C-XB-D0m" secondAttribute="centerX" id="1ef-ZX-Bv9"/>
                             <constraint firstItem="ncT-fa-Msx" firstAttribute="leading" secondItem="04v-sc-PGl" secondAttribute="leading" id="Ngh-jp-ejL"/>
                             <constraint firstAttribute="bottom" secondItem="ncT-fa-Msx" secondAttribute="bottom" id="PoQ-my-yqP"/>
+                            <constraint firstItem="Xvn-Of-yUc" firstAttribute="centerY" secondItem="A0C-XB-D0m" secondAttribute="centerY" id="XzF-sU-3Fc"/>
                             <constraint firstItem="ncT-fa-Msx" firstAttribute="trailing" secondItem="04v-sc-PGl" secondAttribute="trailing" id="aGq-iq-cCy"/>
                             <constraint firstItem="ncT-fa-Msx" firstAttribute="top" secondItem="04v-sc-PGl" secondAttribute="top" id="aJ7-8z-KAq"/>
+                            <constraint firstItem="Xvn-Of-yUc" firstAttribute="width" secondItem="Xvn-Of-yUc" secondAttribute="height" multiplier="1:1" id="pwE-MP-kZE"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="actInd" destination="Xvn-Of-yUc" id="d0i-e0-OjT"/>
                         <outlet property="vaccinationPinTV" destination="ncT-fa-Msx" id="Csl-1Y-uAN"/>
                     </connections>
                 </viewController>
@@ -687,6 +746,11 @@
             <point key="canvasLocation" x="37.681159420289859" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1Zw-RG-evZ"/>
+        <designable name="Xvn-Of-yUc"/>
+        <designable name="lmC-ey-caA"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="IjX-Jb-1t0"/>
     </inferredMetricsTieBreakers>

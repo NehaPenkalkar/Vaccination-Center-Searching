@@ -7,5 +7,6 @@ target 'VaccineCenters' do
 
   # Pods for VaccineCenters
 	pod 'Alamofire', '~> 5.2'
+  pod 'lottie-ios'
 
 end

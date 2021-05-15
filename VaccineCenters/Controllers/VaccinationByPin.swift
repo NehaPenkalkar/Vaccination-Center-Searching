@@ -7,8 +7,11 @@
 
 import UIKit
 import Alamofire
+import Lottie
 
 class VaccinationByPin: UIViewController {
+    
+    @IBOutlet weak var actInd: AnimationView!
     
     @IBOutlet weak var vaccinationPinTV: UITableView!
     
@@ -25,31 +28,56 @@ class VaccinationByPin: UIViewController {
         vaccinationPinAPI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        actInd.play()
+        actInd.loopMode = .loop
+    }
+    
     func vaccinationPinAPI(){
-        AF.request("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=\(id)&date=\(date)").responseJSON{(resp) in
-            if let  data = resp.value as? NSDictionary {
-                
-                self.pVaccine = data.value(forKey: "sessions") as! [NSDictionary]
-                
-                self.vaccinationPinTV.reloadData()
-                
-                if self.pVaccine.isEmpty{
+        if Connectivity.isConnectedToInternet(){
+            AF.request("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=\(id)&date=\(date)").responseJSON{(resp) in
+                if let  data = resp.value as? NSDictionary {
                     
-                    self.vaccinationPinTV.isHidden = true
-                    let alert = UIAlertController(title: "No Data Found", message: "The area you are looking into has no vaccination centers available for now", preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "OK", style: .cancel) { alert in
-                        self.navigationController?.popViewController(animated: true)
+                    self.actInd.pause()
+                    self.actInd.isHidden = true
+                    
+                    self.pVaccine = data.value(forKey: "sessions") as! [NSDictionary]
+                    
+                    self.vaccinationPinTV.reloadData()
+                    
+                    if self.pVaccine.isEmpty{
+                        
+                        self.vaccinationPinTV.isHidden = true
+                        let alert = UIAlertController(title: "No Data Found", message: "The area you are looking into has no vaccination centers available for now", preferredStyle: .alert)
+                        let ok = UIAlertAction(title: "OK", style: .cancel) { alert in
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
                     }
+                }
+                else {
                     
-                    alert.addAction(ok)
-                    self.present(alert, animated: true, completion: nil)
+                    print("Some Error")
                 }
             }
-            else {
-                
-                print("Error")
-            }
+        }else{
+            
+            self.actInd.pause()
+            self.actInd.isHidden = true
+            showErr(title: "No Internet Connection!!", message: "Please Check Your Internet Connection and Try Again")
         }
+    }
+    
+    func showErr(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel) { alert in
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 }
 
